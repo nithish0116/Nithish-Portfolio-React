@@ -1,5 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { FileDown } from 'lucide-react';
+
 
 const About = () => {
   return (
@@ -18,25 +19,36 @@ const About = () => {
             {/* Image Section */}
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="src/components/Assests/nithish.portfolio.jpg"
+                src="Assests/nithish.portfolio.jpg"
                 alt="Developer working"
-                className="rounded-lg "
+                className="rounded-lg"
               />
             </div>
 
             {/* Text Section */}
-            <div className="md:w-1/2">
-  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-    Hello! I'm a dedicated full-stack developer with a passion for building robust and scalable web applications. 
-    I specialize in creating seamless user experiences on the frontend using technologies like React, HTML, CSS, 
-    and JavaScript, paired with strong backend expertise.
-  </p>
-  <p className="text-lg text-gray-700 dark:text-gray-300">
-    My backend skills include working with Node.js, Express, MongoDB, SQL, and PostgreSQL, enabling me to 
-    design and manage efficient databases and APIs. Whether it's crafting dynamic interfaces or implementing 
-    powerful server-side logic, I focus on delivering high-quality solutions tailored to user needs.
-  </p>
-</div>
+            <div className="md:w-1/2 flex flex-col items-center">
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                Hello! I'm a dedicated full-stack developer with a passion for building robust and scalable web applications. 
+                I specialize in creating seamless user experiences on the frontend using technologies like React, HTML, CSS, 
+                and JavaScript, paired with strong backend expertise.
+              </p>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                My backend skills include working with Node.js, Express, MongoDB, SQL, and PostgreSQL, enabling me to 
+                design and manage efficient databases and APIs. Whether it's crafting dynamic interfaces or implementing 
+                powerful server-side logic, I focus on delivering high-quality solutions tailored to user needs.
+              </p>
+
+              {/* Centered Download CV Button */}
+              <motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="/Resume_Dev_linkedin.pdf"
+                download
+                className="flex items-start bg-gray-200 border-2 border-white px-6 py-3 rounded-lg font-medium text-gray-800 hover:bg-gray-800 hover:text-white transition-colors"              >
+                <FileDown size={20} />
+                Download CV
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       </div>

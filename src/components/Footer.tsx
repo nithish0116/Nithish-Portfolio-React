@@ -1,5 +1,4 @@
-import React from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -24,13 +23,6 @@ const Footer = () => {
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter size={24} />
             </a>
           </div>
         </div>

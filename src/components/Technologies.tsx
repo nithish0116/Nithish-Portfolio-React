@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Palette, Database, Globe, Laptop, Smartphone, Server, Cloud } from 'lucide-react';
 
@@ -6,22 +5,22 @@ const technologies = [
   {
     icon: <Code2 size={40} />,
     title: 'Frontend Development',
-    description: 'React, TypeScript, Tailwind CSS'
+    description: 'React, Angular, JavaScript, TypeScript, Tailwind CSS, Material UI, AntD UI'
   },
   {
     icon: <Database size={40} />,
     title: 'Backend Development',
-    description: 'Node.js, Express, MongoDB'
+    description: 'Node.js, Express, MongoDB, SQL, PostgreSQL'
   },
   {
     icon: <Palette size={40} />,
     title: 'UI/UX Design',
-    description: 'Figma, Adobe XD, Prototyping'
+    description: 'Figma, Adobe XD'
   },
   {
     icon: <Globe size={40} />,
     title: 'Web Technologies',
-    description: 'HTML5, CSS3, JavaScript'
+    description: 'HTML5, CSS3, JavaScript, Typescript, React Js, Anuglar'
   },
   {
     icon: <Laptop size={40} />,
@@ -31,17 +30,17 @@ const technologies = [
   {
     icon: <Smartphone size={40} />,
     title: 'Mobile Development',
-    description: 'React Native, Expo'
+    description: 'React Native'
   },
   {
     icon: <Server size={40} />,
     title: 'DevOps',
-    description: 'Docker, CI/CD, Git'
+    description: 'CI/CD, Git, GitHub'
   },
   {
     icon: <Cloud size={40} />,
     title: 'Cloud Services',
-    description: 'AWS, Firebase, Vercel'
+    description: 'AWS, Vercel'
   }
 ];
 
@@ -62,22 +61,22 @@ const Technologies = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.02 }} // Desktop interaction
+                whileTap={{ scale: 0.95 }} // Mobile tap interaction
                 transition={{ duration: 0.3 }}
                 className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all"
               >
+                {/* Animated Icon */}
                 <motion.div
-                   whileHover={{
-                   rotate: [0.1, 10, 0, 0],
-                   scale: [1,1, 1],
-                   }}
-                   transition={{
-                   duration: 0.6,
-                  ease: "easeInOut",
+                  animate={{ rotate: [0, 5, -5, 0] }} // Always animates when in view
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut'
                   }}
                   className="text-red-600 dark:text-red-600 mb-4"
                 >
-                 {tech.icon}
+                  {tech.icon}
                 </motion.div>
                 <h3 className="text-xl font-semibold mb-2 dark:text-white">{tech.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{tech.description}</p>

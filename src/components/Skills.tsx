@@ -1,13 +1,14 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
-  { name: 'React', level: 90 },
-  { name: 'TypeScript', level: 85 },
-  { name: 'Node.js', level: 80 },
-  { name: 'UI/UX Design', level: 85 },
   { name: 'HTML/CSS', level: 95 },
-  { name: 'JavaScript', level: 90 }
+  { name: 'UI/UX Design', level: 85 },
+  { name: 'JavaScript', level: 90 },
+  { name: 'TypeScript', level: 85 },
+  { name: 'React', level: 90 },
+  { name: 'Node.js', level: 85 },
+  { name: 'MongoDB', level: 75 },
+  { name: 'SQl', level: 90 },
 ];
 
 const Skills = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
@@ -28,7 +27,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center gap-4 dark:text-gray-300">
                     <MapPin className="text-red-600" />
-                    <span>Your Location</span>
+                    <span>Hyderabad</span>
                   </div>
                 </div>
               </div>
@@ -63,7 +62,7 @@ const Contact = () => {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-transparent border-white border-2 py-2 px-6 rounded-lg hover:bg-red-500 transition-colors"
+                    className="w-full bg-transparent border-white border-2 py-2 px-6 rounded-lg hover:bg-red-500 transition-colors dark:text-white"
                   >
                     Send Message
                   </button>
