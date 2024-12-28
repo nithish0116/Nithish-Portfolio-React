@@ -23,7 +23,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('public/Assests/wallpaper.portfolio.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Assests/wallpaper.portfolio.jpg')`,
         }}
       />
 
@@ -61,7 +61,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/gadala-nithish" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-gray-600 hover:border-gray-600 hover:text-black transition-colors"
+              className="flex items-center gap-2 bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-sky-600 hover:border-gray-600 hover:text-white transition-colors"
               >
               <Linkedin size={24} />
                LinkedIn
